@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    .content {
+        width: calc(100% - 250px);
+        height: calc(100% - 60px);
+        transition: all 0.3s;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        &.hide-sidebar {
+            width: calc(100% - 20px);
+        }
+    }
+}

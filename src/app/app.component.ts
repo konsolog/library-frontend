@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'library';
+  public title = 'library';
+  public hideSidebar = true;
+
+  public sidebarTriggered(hideSidebar: boolean): void {
+    this.hideSidebar = hideSidebar;
+  }
 }

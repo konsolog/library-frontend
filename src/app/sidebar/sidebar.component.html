@@ -1,0 +1,13 @@
+<nav id="sidebar" [ngClass]="{ hide: hideSidebar }">
+    <div class="sidebar-collapse" (click)="sidebarCollapseClicked()">
+        <app-icons name="chevron-double-left" class="bi-chevron-double-left"></app-icons>
+        <app-icons name="chevron-double-right" class="bi-chevron-double-right"></app-icons>
+    </div>
+    <ul class="nav flex-column nav-pills">
+        <li class="nav-item">
+            <a [routerLink]="['/library']" class="nav-link" [ngClass]="{ active: router.url.includes('library') }">
+                List Libraries
+            </a>
+        </li>
+    </ul>
+</nav>

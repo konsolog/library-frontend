@@ -1,0 +1,52 @@
+@import '../../variables';
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 45px;
+    z-index: 999;
+    background: $gray-400;
+    color: #fff;
+    transition: all 0.3s;
+    &.hide {
+        width: 20px;
+        ul {
+            display: none;
+        }
+        .sidebar-collapse {
+            .bi-chevron-double-left {
+                display: none;
+            }
+            .bi-chevron-double-right {
+                display: block;
+            }
+        }
+    }
+    ul {
+        margin-top: 20px;
+        a {
+            color: #000;
+            border-radius: 0;
+            &.active {
+                color: #fff;
+                background-color: #0c0c0c;
+            }
+        }
+    }
+    .sidebar-collapse {
+        position: absolute;
+        right: 3px;
+        cursor: pointer;
+        margin-top: -5px;
+        color: #000;
+        .bi-chevron-double-left {
+            display: block;
+        }
+        .bi-chevron-double-right {
+            display: none;
+        }
+    }
+}

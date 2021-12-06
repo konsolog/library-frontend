@@ -2,3 +2,44 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+.navbar {
+    background-color: #0c0c0c;
+    border-bottom: solid 1px #232327;
+    padding-top: 0;
+    padding-bottom: 0;
+    > .navbar-brand {
+      img {
+        animation: initial;
+        background: none;
+      }
+    }
+    > .navbar-text {
+      button {
+        min-width: initial;
+      }
+    }
+  }
+  .nav {
+    .nav-item {
+      &.active {
+        background-color: #0c0c0c;
+      }
+    }
+  }
+  .dropdown-item {
+    &.active {
+      background: #0c0c0c;
+    }
+  }
+  
+  a, a:not([href]) {
+    color: $cyan;
+    cursor: pointer;
+    &:hover {
+      color: darken($cyan, 20);
+      text-decoration: none;
+    }
+  }
